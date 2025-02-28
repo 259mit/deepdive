@@ -1,5 +1,5 @@
 This model consists of a sequence of 1000 binary categorical vars repeating this pattern: `HT????`, where `H` = heads, `T` = tails, and `?` are unknown vars. There is a binary factor for each pair of consecutive vars, parameterized on the 4 label outcomes on the pair.
-
+ 
 Internally, the cid of `H` is 0 and `T` is 1.
 Before the sampler fix in https://github.com/HazyResearch/sampler/pull/41 ,
 the unknown vars keep the default value of `H` during SGD steps, and we
